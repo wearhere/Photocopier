@@ -26,7 +26,7 @@
 /* Begin PBXFileReference section */
 		F015EAF719E148A00043B886 /* PCRUserNotificationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCRUserNotificationHelper.h; sourceTree = "<group>"; };
 		F015EAF819E148A00043B886 /* PCRUserNotificationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCRUserNotificationHelper.m; sourceTree = "<group>"; };
-		F0AF492F19DBEA24004FAAE6 /* ChromeGIFCopier */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ChromeGIFCopier; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0AF492F19DBEA24004FAAE6 /* Photocopier */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = Photocopier; path = Photocopier; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0AF493219DBEA24004FAAE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,7 +44,7 @@
 		F0AF492619DBEA24004FAAE6 = {
 			isa = PBXGroup;
 			children = (
-				F0AF493119DBEA24004FAAE6 /* ChromeGIFCopier */,
+				F0AF493119DBEA24004FAAE6 /* Photocopier */,
 				F0AF493019DBEA24004FAAE6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,27 +52,27 @@
 		F0AF493019DBEA24004FAAE6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F0AF492F19DBEA24004FAAE6 /* ChromeGIFCopier */,
+				F0AF492F19DBEA24004FAAE6 /* Photocopier */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F0AF493119DBEA24004FAAE6 /* ChromeGIFCopier */ = {
+		F0AF493119DBEA24004FAAE6 /* Photocopier */ = {
 			isa = PBXGroup;
 			children = (
 				F0AF493219DBEA24004FAAE6 /* main.m */,
 				F015EAF719E148A00043B886 /* PCRUserNotificationHelper.h */,
 				F015EAF819E148A00043B886 /* PCRUserNotificationHelper.m */,
 			);
-			path = ChromeGIFCopier;
+			path = Photocopier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F0AF492E19DBEA24004FAAE6 /* ChromeGIFCopier */ = {
+		F0AF492E19DBEA24004FAAE6 /* Photocopier */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F0AF493619DBEA24004FAAE6 /* Build configuration list for PBXNativeTarget "ChromeGIFCopier" */;
+			buildConfigurationList = F0AF493619DBEA24004FAAE6 /* Build configuration list for PBXNativeTarget "Photocopier" */;
 			buildPhases = (
 				F0AF492B19DBEA24004FAAE6 /* Sources */,
 				F0AF492C19DBEA24004FAAE6 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = ChromeGIFCopier;
-			productName = ChromeGIFCopier;
-			productReference = F0AF492F19DBEA24004FAAE6 /* ChromeGIFCopier */;
+			name = Photocopier;
+			productName = Photocopier;
+			productReference = F0AF492F19DBEA24004FAAE6 /* Photocopier */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -101,7 +101,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F0AF492A19DBEA24004FAAE6 /* Build configuration list for PBXProject "ChromeGIFCopier" */;
+			buildConfigurationList = F0AF492A19DBEA24004FAAE6 /* Build configuration list for PBXProject "Photocopier" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -113,7 +113,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F0AF492E19DBEA24004FAAE6 /* ChromeGIFCopier */,
+				F0AF492E19DBEA24004FAAE6 /* Photocopier */,
 			);
 		};
 /* End PBXProject section */
@@ -222,7 +222,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F0AF492A19DBEA24004FAAE6 /* Build configuration list for PBXProject "ChromeGIFCopier" */ = {
+		F0AF492A19DBEA24004FAAE6 /* Build configuration list for PBXProject "Photocopier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F0AF493419DBEA24004FAAE6 /* Debug */,
@@ -231,7 +231,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F0AF493619DBEA24004FAAE6 /* Build configuration list for PBXNativeTarget "ChromeGIFCopier" */ = {
+		F0AF493619DBEA24004FAAE6 /* Build configuration list for PBXNativeTarget "Photocopier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F0AF493719DBEA24004FAAE6 /* Debug */,

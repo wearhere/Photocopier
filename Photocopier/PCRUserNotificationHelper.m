@@ -1,6 +1,6 @@
 //
 //  PCRUserNotificationHelper.m
-//  ChromeGIFCopier
+//  Photocopier
 //
 //  Created by Jeffrey Wear on 10/5/14.
 //  Copyright (c) 2014 Jeffrey Wear. All rights reserved.

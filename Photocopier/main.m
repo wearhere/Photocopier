@@ -1,8 +1,8 @@
 //
 //  main.m
-//  ChromeGIFCopier
+//  Photocopier
 //
-//  This is the ChromeGIFCopier native messaging "host", in the parlance of the
+//  This is the Photocopier native messaging "host", in the parlance of the
 //  native messaging documentation (https://developer.chrome.com/extensions/messaging#native-messaging ).
 //
 //  The tool receives the URL of the image to be copied to the pasteboard from
