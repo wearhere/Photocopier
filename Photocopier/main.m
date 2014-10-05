@@ -112,7 +112,8 @@ BOOL copyImageDataToPasteboard(NSData *imageData) {
         // RTFD data is obtained from an attributed string that embeds the image.
         NSPasteboardItem *gifImage = [[NSPasteboardItem alloc] init];
         NSFileWrapper *fileWrapper = [[NSFileWrapper alloc] initRegularFileWithContents:imageData];
-        // This file name does not matter, but without one, the file can't be attached to the attributed string.
+        // It doesn't matter what this file name is, but we need one, otherwise
+        // the file can't be attached to the attributed string.
         [fileWrapper setPreferredFilename:@"image.gif"];
         NSTextAttachment *attachment = [[NSTextAttachment alloc] initWithFileWrapper:fileWrapper];
         NSAttributedString *str = [NSAttributedString attributedStringWithAttachment:attachment];
