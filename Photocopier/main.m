@@ -131,19 +131,22 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSURL *imageURL = readImageURL();
         if (!imageURL) {
-            logError(@"Could not read image URL from extension.");
+            logError(NSLocalizedString(@"Could not read image URL from extension.",
+                                       @"Could not read image URL error message"));
             return 1;
         }
         
         NSError *imageReadError = nil;
         NSData *imageData = [[NSData alloc] initWithContentsOfURL:imageURL options:0 error:&imageReadError];
         if (!imageData) {
-            logError(@"Could not read image at URL %@: %@", imageURL, imageReadError);
+            logError(NSLocalizedString(@"Could not read image at URL %@: %@",
+                                       @"Could not read image error message (format: URL, error)"), imageURL, imageReadError);
             return 1;
         }
         
         if (!copyImageDataToPasteboard(imageData)) {
-            logError(@"Could not copy GIF at URL: %@", [imageURL absoluteString]);
+            logError(NSLocalizedString(@"Could not copy image at URL: %@",
+                                       @"Could not copy image error message (format: URL)"), [imageURL absoluteString]);
             return 1;
         }
         
