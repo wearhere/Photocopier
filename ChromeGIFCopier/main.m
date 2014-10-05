@@ -15,6 +15,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import "PCRUserNotificationHelper.h"
+
 /**
  A note re: communicating with the Chrome extension, reproduced from the documentation
  (https://developer.chrome.com/extensions/messaging#native-messaging ):
@@ -25,7 +27,9 @@
  */
 
 /**
- Log an error to the Console and also back to the extension.
+ Log an error–to a notification, for the user to see; to the Console, in case
+ the notification doesn't go through for some reason; and back to the extension,
+ to verify that the extension and host are communicating, at the least.
 
  It's necessary to provide a prototype to apply the format function attribute.
  */
@@ -35,6 +39,11 @@ void logError(NSString *format, ...) {
     va_start(args, format);
     NSString *formattedError = [[NSString alloc] initWithFormat:format arguments:args];
     va_end(args);
+    
+    NSUserNotification *errorNotification = [[NSUserNotification alloc] init];
+    errorNotification.title = NSLocalizedString(@"Could Not Copy Image", @"Error message");
+    errorNotification.informativeText = formattedError;
+    [PCRUserNotificationHelper deliverNotification:errorNotification];
     
     NSLog(@"Error: %@", formattedError);
     
@@ -137,6 +146,10 @@ int main(int argc, const char * argv[]) {
             logError(@"Could not copy GIF at URL: %@", [imageURL absoluteString]);
             return 1;
         }
+        
+        NSUserNotification *successNotification = [[NSUserNotification alloc] init];
+        successNotification.title = NSLocalizedString(@"Image copied!", @"Success message");
+        [PCRUserNotificationHelper deliverNotification:successNotification];
     }
     return 0;
 }
