@@ -154,6 +154,10 @@ int main(int argc, const char * argv[]) {
         NSUserNotification *successNotification = [[NSUserNotification alloc] init];
         successNotification.title = NSLocalizedString(@"Image copied!", @"Success message");
         [PCRUserNotificationHelper deliverNotification:successNotification];
+        
+        // Dismiss the notification after 3 seconds.
+        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:3.0]];
+        [PCRUserNotificationHelper removeDeliveredNotification:successNotification];
     }
     return 0;
 }

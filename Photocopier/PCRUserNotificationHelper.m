@@ -59,6 +59,10 @@ static NSTimeInterval kNotificationDeliveryTimeout = 2.0;
     }
 }
 
++ (void)removeDeliveredNotification:(NSUserNotification *)notification {
+    [[NSUserNotificationCenter defaultUserNotificationCenter] removeDeliveredNotification:notification];
+}
+
 #pragma mark - NSUserNotificationCenterDelegate
 
 // These are technically instance methods, per the `NSUserNotificationCenterDelegate`

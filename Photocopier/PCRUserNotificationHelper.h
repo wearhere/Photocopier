@@ -11,5 +11,6 @@
 @interface PCRUserNotificationHelper : NSObject
 
 + (void)deliverNotification:(NSUserNotification *)notification;
++ (void)removeDeliveredNotification:(NSUserNotification *)notification;
 
 @end
