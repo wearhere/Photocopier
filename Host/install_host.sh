@@ -2,7 +2,10 @@
 
 set -e
 
-DIR="$( cd "$( dirname "$0" )" && pwd )"
+# Run this from the host directory for the convenience of copying files and
+# building the host.
+cd "$( dirname "$0" )"
+
 if [ $(uname -s) == 'Darwin' ]; then
   if [ "$(whoami)" == "root" ]; then
     TARGET_DIR="/Library/Google/Chrome/NativeMessagingHosts"
@@ -23,10 +26,13 @@ HOST_NAME=com.jeffreywear.photocopier
 mkdir -p "$TARGET_DIR"
 
 # Copy native messaging host manifest.
-cp "$DIR/$HOST_NAME.json" "$TARGET_DIR"
+cp "$HOST_NAME.json" "$TARGET_DIR"
+
+# Build the host.
+xcodebuild > /dev/null
 
 # Update host path in the manifest.
-HOST_PATH="$DIR"/native-messaging-example-host
+HOST_PATH="$( pwd )/build/Release/Photocopier"
 ESCAPED_HOST_PATH="${HOST_PATH////\\/}"
 sed -i "" -e "s/HOST_PATH/$ESCAPED_HOST_PATH/" "$TARGET_DIR/$HOST_NAME.json"
 
