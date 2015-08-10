@@ -17,7 +17,7 @@ else
   fi
 fi
 
-HOST_NAME=com.jeffreywear.Photocopier
+HOST_NAME=com.jeffreywear.photocopier
 
 # Create directory to store native messaging host.
 mkdir -p "$TARGET_DIR"

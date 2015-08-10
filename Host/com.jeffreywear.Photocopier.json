@@ -1,5 +1,6 @@
 {
-    "name": "com.jeffreywear.Photocopier",
+    // Only lowercase characters are allowed.
+    "name": "com.jeffreywear.photocopier",
     "description": "Photocopier Host",
 
     // This is overwritten by the installer.

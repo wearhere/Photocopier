@@ -19,7 +19,7 @@ chrome.runtime.onInstalled.addListener(function(reason, previousVersion, id) {
             if (info.menuItemId !== reallyCopyImageItemId) return;
 
             chrome.runtime.sendNativeMessage(
-                "com.jeffreywear.Photocopier",
+                "com.jeffreywear.photocopier",
                 {url: info.srcUrl},
                 function(response) {
                     if (chrome.runtime.lastError) {

@@ -17,6 +17,6 @@ else
   fi
 fi
 
-HOST_NAME=com.jeffreywear.Photocopier
+HOST_NAME=com.jeffreywear.photocopier
 rm "$TARGET_DIR/$HOST_NAME.json"
 echo Native messaging host $HOST_NAME has been uninstalled.
