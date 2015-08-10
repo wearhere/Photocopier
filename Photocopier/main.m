@@ -117,7 +117,7 @@ BOOL copyImageDataToPasteboard(NSData *imageData) {
         [fileWrapper setPreferredFilename:@"image.gif"];
         NSTextAttachment *attachment = [[NSTextAttachment alloc] initWithFileWrapper:fileWrapper];
         NSAttributedString *str = [NSAttributedString attributedStringWithAttachment:attachment];
-        NSData *gifRFTDData = [str RTFDFromRange:NSMakeRange(0, [str length]) documentAttributes:nil];
+        NSData *gifRFTDData = [str RTFDFromRange:NSMakeRange(0, [str length]) documentAttributes:@{}];
         [gifImage setData:gifRFTDData forType:NSPasteboardTypeRTFD];
         
         [pasteboardItems addObject:gifImage];
