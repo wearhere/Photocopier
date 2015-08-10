@@ -46,6 +46,8 @@ static NSTimeInterval kNotificationDeliveryTimeout = 2.0;
     NSUserNotificationCenter *userNotificationCenter = [NSUserNotificationCenter defaultUserNotificationCenter];
     [userNotificationCenter setDelegate:(id<NSUserNotificationCenterDelegate>)self];
     
+    didDeliverNotification = NO;
+    
     // After delivering the notification, we must wait to return until we confirm
     // delivery–so that we can force delivery if Chrome is frontmost.
     // (Without waiting, the tool might quit before `NSUserNotificationCenter` asks
