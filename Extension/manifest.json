@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+
+    // We need to control the key because it determines the ID of the extension
+    // and we need to know that in order to give the extension access to the host.
+    // This key produces ID "bbcghekamcapdonelnemkjfjfknlbkjg".
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxPoAcEhFvTWSh7OIsDEJy976vSloxhbstVPgAo5NwE0DM46E5qRHhEnQhc0Svm6ouQJYOPBOm03LO3CSosPR47C1LQQhH06xSSeOASDcAotAzq7MpSnKdwKhsJXo+n8yy5mxvCDhxUq+xU3xYCND/WHxEInfNObcb24t3mtMDHx2mo6rFpev7wsNiqkJvmlXbUsb7VpZProMIiJ99WGuZIaZBEmhdB85o7nf4ZyeYoSfg/wAlOFgqlxnaBqFFjGttHqzExnAG+NIHF5jTaL12jyugrsqL6Vwi1m80Fw6R6da9jOR2chmvc2d9w3TIB+fVK1vMQHSW0ZQhpXCl0rOpwIDAQAB",
+
+    "name": "Photocopier",
+    "version": "1.0",
+    "description": "Copy regular images _and_ animated GIFs.",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    },
+    "permissions": [
+        "contextMenus",
+        "nativeMessaging"
+    ]
+}

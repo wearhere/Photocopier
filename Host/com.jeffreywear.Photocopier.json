@@ -1,0 +1,12 @@
+{
+    "name": "com.jeffreywear.Photocopier",
+    "description": "Photocopier Host",
+
+    // This is overwritten by the installer.
+    "path": "HOST_PATH",
+    "type": "stdio",
+    "allowed_origins": [
+        // This is the ID determined by `key` in the extension manifest.
+        "chrome-extension://bbcghekamcapdonelnemkjfjfknlbkjg/"
+    ]
+}
