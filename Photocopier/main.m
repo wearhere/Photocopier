@@ -3,7 +3,7 @@
 //  Photocopier
 //
 //  This is the Photocopier native messaging "host", in the parlance of the
-//  native messaging documentation (https://developer.chrome.com/extensions/messaging#native-messaging ).
+//  native messaging documentation (https://developer.chrome.com/extensions/nativeMessaging ).
 //
 //  The tool receives the URL of the image to be copied to the pasteboard from
 //  `stdin`, copies it, and if an error occurs, writes that back to the extension
@@ -19,7 +19,7 @@
 
 /**
  A note re: communicating with the Chrome extension, reproduced from the documentation
- (https://developer.chrome.com/extensions/messaging#native-messaging ):
+ (https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-protocol ):
  
  > "The same format is used to send messages in both directions: each message
  is serialized using JSON, UTF-8 encoded and is preceded with 32-bit message
