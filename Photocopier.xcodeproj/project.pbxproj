@@ -26,7 +26,7 @@
 /* Begin PBXFileReference section */
 		F015EAF719E148A00043B886 /* PCRUserNotificationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCRUserNotificationHelper.h; sourceTree = "<group>"; };
 		F015EAF819E148A00043B886 /* PCRUserNotificationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCRUserNotificationHelper.m; sourceTree = "<group>"; };
-		F0AF492F19DBEA24004FAAE6 /* Photocopier */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = Photocopier; path = Photocopier; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0AF492F19DBEA24004FAAE6 /* Photocopier */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Photocopier; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0AF493219DBEA24004FAAE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,7 +93,7 @@
 		F0AF492719DBEA24004FAAE6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Jeffrey Wear";
 				TargetAttributes = {
 					F0AF492E19DBEA24004FAAE6 = {
@@ -150,6 +150,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
