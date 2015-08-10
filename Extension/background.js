@@ -22,6 +22,10 @@ chrome.runtime.onInstalled.addListener(function(reason, previousVersion, id) {
                 "com.jeffreywear.Photocopier",
                 {url: info.srcUrl},
                 function(response) {
+                    if (chrome.runtime.lastError) {
+                        console.log('Could not send message to host:', chrome.runtime.lastError);
+                    }
+
                     // Chrome will call this handler even if the host doesn't
                     // output anything.
                     if (!response) return;
