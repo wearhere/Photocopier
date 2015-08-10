@@ -3,6 +3,12 @@ chrome.runtime.onInstalled.addListener(function(reason, previousVersion, id) {
 
     // Avoid adding a duplicate menu item.
     chrome.contextMenus.remove(reallyCopyImageItemId, function() {
+        if (chrome.runtime.lastError) {
+            // Ignore the error we'll get when trying to install the item for the
+            // first time, when the item can't be found. We must check the error
+            // or else the runtime will barf.
+        }
+
         chrome.contextMenus.create({
             id: reallyCopyImageItemId,
             title: "Really Copy Image",
